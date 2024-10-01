@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basisachtergrond */
+body {
+  @apply bg-aged-paper;
+}
+
+/* Achtergrond met lichte lijnen zoals in een schrift */
+.bg-paper {
+  background-color: #fdf4e3; /* Licht verouderd papier */
+  background-image: linear-gradient(transparent, transparent 90%), 
+                    linear-gradient(90deg, #8a573b 1px, transparent 1px);
+  background-size: 100% 20px, 20px 100%;
+  background-position: left top, left top;
+}
+
+/* Handgeschreven font */
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+.font-hand {
+  font-family: 'Rock Salt', cursive;
+}
+
+/* Container met een ouderwetse boekstijl */
+.container {
+  @apply max-w-4xl mx-auto p-6 border-4 border-dotted border-dusty-brown bg-light-beige rounded-xl shadow-xl mt-10;
+}
+
+/* Knopstijl met zachte bruinrode tinten */
+.btn {
+  @apply px-4 py-2 mt-4 bg-dusty-brown text-white rounded hover:bg-dark-sepia transition duration-300 shadow-md;
+}
+
+/* Tekstvakken en selectors in bijpassende stijl */
+.mood-selector,
+.note-input {
+  @apply bg-soft-brown border-4 border-dotted border-dusty-brown p-4 rounded-lg shadow-md;
+}
+
+/* Entries met meer scheiding */
+.diary-entry {
+  @apply bg-sepia bg-opacity-40 border-2 border-dotted border-dusty-brown p-6 rounded-lg shadow-lg mb-6;
+  min-height: 180px;
+}
+
+/* Grid voor entries met meer ruimte en klassieke stijl */
+.diary-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8; /* Grid met meer ruimte tussen entries */
+}
+
+/* Ouderwetse randstijl */
+.diary-entry:hover {
+  @apply shadow-xl border-dark-sepia;
+}
+
+/* Specifieke stijl voor headers */
+h1 {
+  @apply text-4xl font-hand text-dark-sepia text-center mb-8;
+}
+
+/* Custom scrollbar voor een oude stijl look */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f8e7d1; /* Achtergrondkleur scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8a573b; /* Donkerbruin voor de scrollbar */
+  border-radius: 10px;
+}
